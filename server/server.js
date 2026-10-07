@@ -1,4 +1,4 @@
-import 'dotenv/config'
+import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
 import path from 'node:path'
@@ -8,6 +8,9 @@ import questionRoutes from './routes/questionRoutes.js'
 import quizRoutes from './routes/quizRoutes.js'
 import Question from './models/Question.js'
 import { questionBank } from './questionBank.js'
+
+const serverDirectory = path.dirname(fileURLToPath(import.meta.url))
+dotenv.config({ path: path.join(serverDirectory, '.env') })
 
 const app = express()
 const port = process.env.PORT || 5000
@@ -44,7 +47,8 @@ app.use(express.static(clientDist))
 app.get('*', (req, res) => res.sendFile(path.join(clientDist, 'index.html')))
 
 export async function start() {
-  await mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/quizly')
+  await mongoose.connect(process.env.MONGODB_URI)
+  console.log('MongoDB connected successfully')
   const importedPath = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'questionBank.import.json')
   const additionalPath = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'questionBank.additional.json')
   let importedQuestions = []
@@ -106,7 +110,7 @@ export async function start() {
       console.log(`Imported ${missingAdditional.length} new engagement questions`)
     }
   }
-  return app.listen(port, () => console.log(`Quizly API listening on port ${port}`))
+  return app.listen(port, () => console.log(`Server running on port ${port}`))
 }
 
 if (process.env.NODE_ENV !== 'test') start().catch(error => { console.error('MongoDB connection failed:', error); process.exit(1) })
