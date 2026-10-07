@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="sticker-hearts" viewBox="0 0 80 80">
+    <path d="M38 60S15 47 15 29c0-11 14-16 22-6l3 4 4-4c8-10 22-5 22 6 0 18-24 31-28 31Z" fill="#E24D6F"/>
+    <path d="M20 18c4-5 12-5 17 1" fill="none" stroke="#FFD6DF" stroke-width="5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="sticker-sparkles" viewBox="0 0 80 80">
+    <path d="M38 8l7 22 22 7-22 7-7 22-7-22-22-7 22-7 7-22Z" fill="#F7C44A"/>
+    <path d="M62 8l3 9 9 3-9 3-3 9-3-9-9-3 9-3 3-9Z" fill="#8A5CF6"/>
+  </symbol>
+  <symbol id="sticker-bows" viewBox="0 0 80 80">
+    <circle cx="40" cy="41" r="7" fill="#D94FA3"/>
+    <path d="M34 38C16 24 7 38 13 53c11 6 20 1 21-15Z" fill="#F27C95"/>
+    <path d="M46 38c18-14 27 0 21 15-11 6-20 1-21-15Z" fill="#F27C95"/>
+    <path d="M40 48l-8 18M40 48l9 18" stroke="#D94FA3" stroke-width="5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="sticker-flowers" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="9" fill="#F7C44A"/>
+    <circle cx="40" cy="18" r="13" fill="#FFB8C8"/>
+    <circle cx="40" cy="62" r="13" fill="#FFB8C8"/>
+    <circle cx="18" cy="40" r="13" fill="#FFB8C8"/>
+    <circle cx="62" cy="40" r="13" fill="#FFB8C8"/>
+    <circle cx="24" cy="24" r="9" fill="#FFD6DF"/>
+    <circle cx="56" cy="56" r="9" fill="#FFD6DF"/>
+  </symbol>
+  <symbol id="sticker-stars" viewBox="0 0 80 80">
+    <path d="M40 7l9 22 24 2-18 16 6 23-21-12-21 12 6-23L7 31l24-2 9-22Z" fill="#F7C44A"/>
+    <path d="M38 18l5 13 14 1-11 9 4 14-12-7-12 7 4-14-11-9 14-1 5-13Z" fill="#FFF5C7"/>
+  </symbol>
+  <symbol id="sticker-clouds" viewBox="0 0 80 80">
+    <path d="M23 58h36c9 0 16-6 16-14 0-7-5-12-12-13-3-10-11-17-22-17-12 0-21 8-23 19C10 34 5 39 5 46c0 7 7 12 18 12Z" fill="#EAF2FF"/>
+    <path d="M22 56h35c7 0 13-5 13-11" fill="none" stroke="#C8D9FF" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="sticker-envelopes" viewBox="0 0 80 80">
+    <rect x="10" y="20" width="60" height="42" rx="8" fill="#FFF6F0" stroke="#E8C6B7" stroke-width="4"/>
+    <path d="M14 25l26 22 26-22M14 58l19-17M66 58L47 41" fill="none" stroke="#E24D6F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="sticker-speech-bubbles" viewBox="0 0 80 80">
+    <path d="M14 19h52c5 0 9 4 9 9v23c0 5-4 9-9 9H39L25 71V60H14c-5 0-9-4-9-9V28c0-5 4-9 9-9Z" fill="#FFFFFF" stroke="#E7D9DD" stroke-width="4"/>
+    <circle cx="29" cy="40" r="4" fill="#8A5CF6"/>
+    <circle cx="42" cy="40" r="4" fill="#E24D6F"/>
+    <circle cx="55" cy="40" r="4" fill="#D88922"/>
+  </symbol>
+  <symbol id="sticker-mini-teddy" viewBox="0 0 80 80">
+    <circle cx="24" cy="29" r="11" fill="#B97848"/>
+    <circle cx="56" cy="29" r="11" fill="#B97848"/>
+    <circle cx="40" cy="39" r="24" fill="#D99A66"/>
+    <ellipse cx="40" cy="47" rx="14" ry="10" fill="#FFE1C6"/>
+    <circle cx="31" cy="37" r="3" fill="#32241D"/>
+    <circle cx="49" cy="37" r="3" fill="#32241D"/>
+    <path d="M36 50c3 3 5 3 8 0" fill="none" stroke="#6F4029" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+</svg>

@@ -1,0 +1,611 @@
+[
+  {
+    "category": "deep",
+    "question": "What's my biggest fear?",
+    "options": [
+      { "text": "Losing someone I love", "imageUrl": "" },
+      { "text": "Failure", "imageUrl": "" },
+      { "text": "Being alone", "imageUrl": "" },
+      { "text": "The unknown", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "deep",
+    "question": "What matters most to me in life?",
+    "options": [
+      { "text": "Family", "imageUrl": "" },
+      { "text": "Love", "imageUrl": "" },
+      { "text": "Success", "imageUrl": "" },
+      { "text": "Peace", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "deep",
+    "question": "What usually makes me genuinely happy?",
+    "options": [
+      { "text": "Spending time with people I love", "imageUrl": "" },
+      { "text": "Achieving my goals", "imageUrl": "" },
+      { "text": "Travelling", "imageUrl": "" },
+      { "text": "Having some alone time", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do I value most in a friendship?",
+    "options": [
+      { "text": "Trust", "imageUrl": "" },
+      { "text": "Loyalty", "imageUrl": "" },
+      { "text": "Honesty", "imageUrl": "" },
+      { "text": "Understanding", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "deep",
+    "question": "What hurts me the most?",
+    "options": [
+      { "text": "Being ignored", "imageUrl": "" },
+      { "text": "Being lied to", "imageUrl": "" },
+      { "text": "Being misunderstood", "imageUrl": "" },
+      { "text": "Losing someone close", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+
+  {
+    "category": "food",
+    "question": "What's my favourite food?",
+    "options": [
+      { "text": "Pizza", "imageUrl": "" },
+      { "text": "Biryani", "imageUrl": "" },
+      { "text": "Momos", "imageUrl": "" },
+      { "text": "Burger", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "food",
+    "question": "What's my favourite snack?",
+    "options": [
+      { "text": "Chips", "imageUrl": "" },
+      { "text": "French Fries", "imageUrl": "" },
+      { "text": "Momos", "imageUrl": "" },
+      { "text": "Samosa", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "food",
+    "question": "What would I choose for a cheat meal?",
+    "options": [
+      { "text": "Pizza", "imageUrl": "" },
+      { "text": "Burger", "imageUrl": "" },
+      { "text": "Biryani", "imageUrl": "" },
+      { "text": "Noodles", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "food",
+    "question": "What's my favourite dessert?",
+    "options": [
+      { "text": "Ice Cream", "imageUrl": "" },
+      { "text": "Cake", "imageUrl": "" },
+      { "text": "Chocolate", "imageUrl": "" },
+      { "text": "Donut", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "food",
+    "question": "What drink do I prefer?",
+    "options": [
+      { "text": "Coffee", "imageUrl": "" },
+      { "text": "Tea", "imageUrl": "" },
+      { "text": "Juice", "imageUrl": "" },
+      { "text": "Cold Drink", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+
+  {
+    "category": "memories",
+    "question": "What's one memory I could never forget?",
+    "options": [
+      { "text": "A childhood memory", "imageUrl": "" },
+      { "text": "A trip", "imageUrl": "" },
+      { "text": "A special celebration", "imageUrl": "" },
+      { "text": "A moment with someone special", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "memories",
+    "question": "What kind of memories do I love talking about?",
+    "options": [
+      { "text": "School memories", "imageUrl": "" },
+      { "text": "College memories", "imageUrl": "" },
+      { "text": "Travel memories", "imageUrl": "" },
+      { "text": "Childhood memories", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "memories",
+    "question": "Where would I love to revisit?",
+    "options": [
+      { "text": "My hometown", "imageUrl": "" },
+      { "text": "A favourite travel place", "imageUrl": "" },
+      { "text": "My school", "imageUrl": "" },
+      { "text": "A memorable cafe", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "memories",
+    "question": "Which type of photo would I keep forever?",
+    "options": [
+      { "text": "Family photo", "imageUrl": "" },
+      { "text": "Friends photo", "imageUrl": "" },
+      { "text": "Travel photo", "imageUrl": "" },
+      { "text": "Childhood photo", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "memories",
+    "question": "What reminds me of my childhood?",
+    "options": [
+      { "text": "Old cartoons", "imageUrl": "" },
+      { "text": "School", "imageUrl": "" },
+      { "text": "Old songs", "imageUrl": "" },
+      { "text": "Family gatherings", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+
+  {
+    "category": "funny",
+    "question": "What's the most likely thing I would do when I'm bored?",
+    "options": [
+      { "text": "Scroll my phone", "imageUrl": "" },
+      { "text": "Sleep", "imageUrl": "" },
+      { "text": "Watch something", "imageUrl": "" },
+      { "text": "Eat", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "funny",
+    "question": "What am I most likely to say?",
+    "options": [
+      { "text": "Bro", "imageUrl": "" },
+      { "text": "Wait what?", "imageUrl": "" },
+      { "text": "Seriously?", "imageUrl": "" },
+      { "text": "I'm hungry", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "funny",
+    "question": "What would I do if I became rich overnight?",
+    "options": [
+      { "text": "Buy a house", "imageUrl": "" },
+      { "text": "Travel the world", "imageUrl": "" },
+      { "text": "Buy a dream car", "imageUrl": "" },
+      { "text": "Start a business", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "funny",
+    "question": "What's my biggest weakness?",
+    "options": [
+      { "text": "Food", "imageUrl": "" },
+      { "text": "Sleep", "imageUrl": "" },
+      { "text": "My phone", "imageUrl": "" },
+      { "text": "Someone I like", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "funny",
+    "question": "What would I probably forget at home before a trip?",
+    "options": [
+      { "text": "Charger", "imageUrl": "" },
+      { "text": "Wallet", "imageUrl": "" },
+      { "text": "Clothes", "imageUrl": "" },
+      { "text": "Toothbrush", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+
+  {
+    "category": "habits",
+    "question": "What do I usually do before sleeping?",
+    "options": [
+      { "text": "Scroll my phone", "imageUrl": "" },
+      { "text": "Watch videos", "imageUrl": "" },
+      { "text": "Listen to music", "imageUrl": "" },
+      { "text": "Read", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "habits",
+    "question": "What's my most annoying habit?",
+    "options": [
+      { "text": "Being late", "imageUrl": "" },
+      { "text": "Overthinking", "imageUrl": "" },
+      { "text": "Ignoring messages", "imageUrl": "" },
+      { "text": "Procrastinating", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "habits",
+    "question": "What do I do when I'm stressed?",
+    "options": [
+      { "text": "Sleep", "imageUrl": "" },
+      { "text": "Listen to music", "imageUrl": "" },
+      { "text": "Talk to someone", "imageUrl": "" },
+      { "text": "Stay alone", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "habits",
+    "question": "What's the first thing I check in the morning?",
+    "options": [
+      { "text": "WhatsApp", "imageUrl": "" },
+      { "text": "Instagram", "imageUrl": "" },
+      { "text": "Notifications", "imageUrl": "" },
+      { "text": "Time", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "habits",
+    "question": "What am I most likely to procrastinate?",
+    "options": [
+      { "text": "Studying", "imageUrl": "" },
+      { "text": "Cleaning", "imageUrl": "" },
+      { "text": "Work", "imageUrl": "" },
+      { "text": "Replying to messages", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+
+  {
+    "category": "friends",
+    "question": "What do I expect from a good friend?",
+    "options": [
+      { "text": "Loyalty", "imageUrl": "" },
+      { "text": "Honesty", "imageUrl": "" },
+      { "text": "Support", "imageUrl": "" },
+      { "text": "Fun", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "friends",
+    "question": "What kind of friend am I?",
+    "options": [
+      { "text": "Funny", "imageUrl": "" },
+      { "text": "Caring", "imageUrl": "" },
+      { "text": "Protective", "imageUrl": "" },
+      { "text": "Quiet", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "friends",
+    "question": "What would I do if my friend was upset?",
+    "options": [
+      { "text": "Call them", "imageUrl": "" },
+      { "text": "Meet them", "imageUrl": "" },
+      { "text": "Give them space", "imageUrl": "" },
+      { "text": "Send a funny message", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "friends",
+    "question": "What would I choose for a hangout?",
+    "options": [
+      { "text": "Cafe", "imageUrl": "" },
+      { "text": "Movie", "imageUrl": "" },
+      { "text": "Gaming", "imageUrl": "" },
+      { "text": "Long drive", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "friends",
+    "question": "How do I usually show my friends that I care?",
+    "options": [
+      { "text": "Helping them", "imageUrl": "" },
+      { "text": "Checking on them", "imageUrl": "" },
+      { "text": "Making them laugh", "imageUrl": "" },
+      { "text": "Spending time with them", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+
+  {
+    "category": "bestie",
+    "question": "What would my bestie know about me that others don't?",
+    "options": [
+      { "text": "My biggest secret", "imageUrl": "" },
+      { "text": "My embarrassing moments", "imageUrl": "" },
+      { "text": "My crush", "imageUrl": "" },
+      { "text": "My biggest fear", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "bestie",
+    "question": "Where would I want to go with my bestie?",
+    "options": [
+      { "text": "Beach", "imageUrl": "" },
+      { "text": "Mountains", "imageUrl": "" },
+      { "text": "Cafe", "imageUrl": "" },
+      { "text": "Road Trip", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "bestie",
+    "question": "What would I call my bestie when teasing them?",
+    "options": [
+      { "text": "Idiot", "imageUrl": "" },
+      { "text": "Bro", "imageUrl": "" },
+      { "text": "Drama Queen", "imageUrl": "" },
+      { "text": "Bestie", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "bestie",
+    "question": "What would we most likely do together?",
+    "options": [
+      { "text": "Eat", "imageUrl": "" },
+      { "text": "Travel", "imageUrl": "" },
+      { "text": "Game", "imageUrl": "" },
+      { "text": "Talk for hours", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "bestie",
+    "question": "Who knows me better?",
+    "options": [
+      { "text": "My Bestie", "imageUrl": "" },
+      { "text": "My Family", "imageUrl": "" },
+      { "text": "My Partner", "imageUrl": "" },
+      { "text": "Nobody 😂", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+
+  {
+    "category": "love",
+    "question": "What's my love language?",
+    "options": [
+      { "text": "Quality Time", "imageUrl": "" },
+      { "text": "Words of Affirmation", "imageUrl": "" },
+      { "text": "Gifts", "imageUrl": "" },
+      { "text": "Physical Touch", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "love",
+    "question": "What's my ideal date?",
+    "options": [
+      { "text": "Dinner", "imageUrl": "" },
+      { "text": "Movie", "imageUrl": "" },
+      { "text": "Long Drive", "imageUrl": "" },
+      { "text": "Beach Walk", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "love",
+    "question": "What would make me feel most loved?",
+    "options": [
+      { "text": "A thoughtful message", "imageUrl": "" },
+      { "text": "Spending time together", "imageUrl": "" },
+      { "text": "A surprise", "imageUrl": "" },
+      { "text": "A hug", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "love",
+    "question": "What's most important to me in a relationship?",
+    "options": [
+      { "text": "Trust", "imageUrl": "" },
+      { "text": "Communication", "imageUrl": "" },
+      { "text": "Loyalty", "imageUrl": "" },
+      { "text": "Understanding", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "love",
+    "question": "What would I choose for a romantic evening?",
+    "options": [
+      { "text": "Dinner", "imageUrl": "" },
+      { "text": "Movie Night", "imageUrl": "" },
+      { "text": "Stargazing", "imageUrl": "" },
+      { "text": "Long Drive", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+
+  {
+    "category": "crush",
+    "question": "What would I do if my crush texted me?",
+    "options": [
+      { "text": "Reply immediately", "imageUrl": "" },
+      { "text": "Wait a little", "imageUrl": "" },
+      { "text": "Overthink the reply", "imageUrl": "" },
+      { "text": "Ask my friend what to say", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "crush",
+    "question": "What would impress me the most?",
+    "options": [
+      { "text": "Good sense of humour", "imageUrl": "" },
+      { "text": "Kindness", "imageUrl": "" },
+      { "text": "Confidence", "imageUrl": "" },
+      { "text": "Intelligence", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "crush",
+    "question": "What's my ideal first date?",
+    "options": [
+      { "text": "Cafe", "imageUrl": "" },
+      { "text": "Movie", "imageUrl": "" },
+      { "text": "Dinner", "imageUrl": "" },
+      { "text": "Walk", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "crush",
+    "question": "What would make me nervous around my crush?",
+    "options": [
+      { "text": "Eye contact", "imageUrl": "" },
+      { "text": "Starting a conversation", "imageUrl": "" },
+      { "text": "Getting ignored", "imageUrl": "" },
+      { "text": "Saying something awkward", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "crush",
+    "question": "What would I notice first about someone I like?",
+    "options": [
+      { "text": "Smile", "imageUrl": "" },
+      { "text": "Eyes", "imageUrl": "" },
+      { "text": "Personality", "imageUrl": "" },
+      { "text": "Voice", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+
+  {
+    "category": "family",
+    "question": "Who knows me the best in my family?",
+    "options": [
+      { "text": "Mom", "imageUrl": "" },
+      { "text": "Dad", "imageUrl": "" },
+      { "text": "Sibling", "imageUrl": "" },
+      { "text": "Everyone equally", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "family",
+    "question": "What's my favourite family activity?",
+    "options": [
+      { "text": "Eating together", "imageUrl": "" },
+      { "text": "Watching movies", "imageUrl": "" },
+      { "text": "Travelling", "imageUrl": "" },
+      { "text": "Celebrating festivals", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "family",
+    "question": "What do I usually do during family gatherings?",
+    "options": [
+      { "text": "Talk with everyone", "imageUrl": "" },
+      { "text": "Eat", "imageUrl": "" },
+      { "text": "Use my phone", "imageUrl": "" },
+      { "text": "Take photos", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "family",
+    "question": "What matters most to me about family?",
+    "options": [
+      { "text": "Love", "imageUrl": "" },
+      { "text": "Support", "imageUrl": "" },
+      { "text": "Togetherness", "imageUrl": "" },
+      { "text": "Trust", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  },
+  {
+    "category": "family",
+    "question": "Where would I love to take my family?",
+    "options": [
+      { "text": "Beach", "imageUrl": "" },
+      { "text": "Mountains", "imageUrl": "" },
+      { "text": "Foreign Country", "imageUrl": "" },
+      { "text": "Religious Place", "imageUrl": "" }
+    ],
+    "correctAnswer": null,
+    "active": true
+  }
+]

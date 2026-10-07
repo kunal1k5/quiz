@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Quizly illustration fallback">
+  <rect width="160" height="160" rx="32" fill="#f3edff"/>
+  <circle cx="80" cy="86" r="42" fill="#fff" stroke="#d8c8ff" stroke-width="5"/>
+  <circle cx="49" cy="48" r="18" fill="#fff" stroke="#d8c8ff" stroke-width="5"/>
+  <circle cx="111" cy="48" r="18" fill="#fff" stroke="#d8c8ff" stroke-width="5"/>
+  <circle cx="66" cy="82" r="4" fill="#6b43d7"/>
+  <circle cx="94" cy="82" r="4" fill="#6b43d7"/>
+  <path d="M72 99c5 6 11 6 16 0" fill="none" stroke="#6b43d7" stroke-linecap="round" stroke-width="4"/>
+</svg>

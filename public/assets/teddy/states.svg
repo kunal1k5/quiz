@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="bear-base">
+      <ellipse cx="80" cy="108" rx="40" ry="36" fill="#C98755"/>
+      <circle cx="51" cy="58" r="18" fill="#B97848"/>
+      <circle cx="109" cy="58" r="18" fill="#B97848"/>
+      <circle cx="51" cy="58" r="10" fill="#F2C7A5"/>
+      <circle cx="109" cy="58" r="10" fill="#F2C7A5"/>
+      <circle cx="80" cy="70" r="39" fill="#D99A66"/>
+      <ellipse cx="80" cy="82" rx="22" ry="17" fill="#FFE1C6"/>
+      <circle cx="66" cy="70" r="4.5" fill="#32241D"/>
+      <circle cx="94" cy="70" r="4.5" fill="#32241D"/>
+      <path d="M74 82c4 4 8 4 12 0" fill="none" stroke="#6F4029" stroke-width="4" stroke-linecap="round"/>
+      <path d="M80 74l-6 7h12l-6-7Z" fill="#6F4029"/>
+      <ellipse cx="43" cy="111" rx="13" ry="22" fill="#C98755" transform="rotate(-24 43 111)"/>
+      <ellipse cx="117" cy="111" rx="13" ry="22" fill="#C98755" transform="rotate(24 117 111)"/>
+      <ellipse cx="61" cy="141" rx="15" ry="9" fill="#B97848"/>
+      <ellipse cx="99" cy="141" rx="15" ry="9" fill="#B97848"/>
+      <circle cx="64" cy="87" r="5" fill="#EE8C8F" opacity=".55"/>
+      <circle cx="96" cy="87" r="5" fill="#EE8C8F" opacity=".55"/>
+    </g>
+    <g id="bow">
+      <circle cx="80" cy="113" r="5" fill="#E24D6F"/>
+      <path d="M76 111c-12-9-20-2-16 8 6 4 13 2 16-8Z" fill="#F27C95"/>
+      <path d="M84 111c12-9 20-2 16 8-6 4-13 2-16-8Z" fill="#F27C95"/>
+    </g>
+    <g id="spark-dots">
+      <circle cx="35" cy="32" r="4" fill="#F7C44A"/>
+      <path d="M119 29l3 8 8 3-8 3-3 8-3-8-8-3 8-3 3-8Z" fill="#8A5CF6"/>
+      <circle cx="133" cy="92" r="3" fill="#E24D6F"/>
+    </g>
+  </defs>
+
+  <symbol id="teddy-home" viewBox="0 0 160 160">
+    <use href="#bear-base"/>
+    <use href="#bow"/>
+    <path d="M80 132s-16-9-16-20c0-6 7-9 12-4l4 4 4-4c5-5 12-2 12 4 0 11-16 20-16 20Z" fill="#FFF6F4"/>
+  </symbol>
+
+  <symbol id="teddy-waving" viewBox="0 0 160 160">
+    <use href="#bear-base"/>
+    <ellipse cx="124" cy="49" rx="10" ry="26" fill="#C98755" transform="rotate(-34 124 49)"/>
+    <path d="M132 18c9 2 15 9 17 18M128 30c6 2 10 6 12 12" fill="none" stroke="#8A5CF6" stroke-width="5" stroke-linecap="round"/>
+    <use href="#bow"/>
+  </symbol>
+
+  <symbol id="teddy-thinking" viewBox="0 0 160 160">
+    <use href="#bear-base"/>
+    <circle cx="121" cy="37" r="13" fill="#FFFFFF" stroke="#E7D9DD" stroke-width="3"/>
+    <circle cx="101" cy="31" r="6" fill="#FFFFFF" stroke="#E7D9DD" stroke-width="3"/>
+    <circle cx="134" cy="25" r="4" fill="#FFFFFF" stroke="#E7D9DD" stroke-width="3"/>
+    <path d="M70 71c-5-4-10-4-14 0M104 71c-5-4-10-4-14 0" fill="none" stroke="#32241D" stroke-width="4" stroke-linecap="round"/>
+    <use href="#bow"/>
+  </symbol>
+
+  <symbol id="teddy-writing" viewBox="0 0 160 160">
+    <use href="#bear-base"/>
+    <rect x="54" y="117" width="52" height="24" rx="6" fill="#FFF6F0" stroke="#E8C6B7" stroke-width="3"/>
+    <path d="M66 127h28M66 135h20" stroke="#D88922" stroke-width="4" stroke-linecap="round"/>
+    <path d="M107 105l20-20 8 8-20 20-11 3 3-11Z" fill="#F7C44A" stroke="#8B5A35" stroke-width="3" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="teddy-happy" viewBox="0 0 160 160">
+    <use href="#bear-base"/>
+    <path d="M60 70c4 5 9 5 13 0M87 70c4 5 9 5 13 0" fill="none" stroke="#32241D" stroke-width="4" stroke-linecap="round"/>
+    <path d="M70 88c7 7 14 7 21 0" fill="none" stroke="#6F4029" stroke-width="4" stroke-linecap="round"/>
+    <use href="#spark-dots"/>
+  </symbol>
+
+  <symbol id="teddy-love" viewBox="0 0 160 160">
+    <use href="#bear-base"/>
+    <path d="M66 76s-10-6-10-13c0-5 6-7 9-3l1 2 2-2c4-4 9-2 9 3 0 7-11 13-11 13Z" fill="#E24D6F"/>
+    <path d="M94 76s-10-6-10-13c0-5 6-7 9-3l1 2 2-2c4-4 9-2 9 3 0 7-11 13-11 13Z" fill="#E24D6F"/>
+    <path d="M80 132s-16-9-16-20c0-6 7-9 12-4l4 4 4-4c5-5 12-2 12 4 0 11-16 20-16 20Z" fill="#FFF6F4"/>
+  </symbol>
+
+  <symbol id="teddy-excited" viewBox="0 0 160 160">
+    <use href="#bear-base"/>
+    <use href="#spark-dots"/>
+    <path d="M60 70l9-8 9 8M88 70l9-8 9 8" fill="none" stroke="#32241D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="80" cy="91" r="7" fill="#6F4029"/>
+  </symbol>
+
+  <symbol id="teddy-sad" viewBox="0 0 160 160">
+    <use href="#bear-base"/>
+    <path d="M61 73c4-4 9-4 13 0M87 73c4-4 9-4 13 0" fill="none" stroke="#32241D" stroke-width="4" stroke-linecap="round"/>
+    <path d="M72 94c5-5 11-5 16 0" fill="none" stroke="#6F4029" stroke-width="4" stroke-linecap="round"/>
+    <path d="M103 82c7 8 8 16 0 19-8-3-7-11 0-19Z" fill="#7EC8F2"/>
+  </symbol>
+
+  <symbol id="teddy-confused" viewBox="0 0 160 160">
+    <use href="#bear-base"/>
+    <path d="M64 68c4-3 8-2 12 1M94 68c-4-3-8-2-12 1" fill="none" stroke="#32241D" stroke-width="4" stroke-linecap="round"/>
+    <text x="121" y="45" fill="#8A5CF6" font-size="32" font-family="Arial, sans-serif" font-weight="700">?</text>
+    <path d="M73 92c5 3 10 3 15 0" fill="none" stroke="#6F4029" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="teddy-loading" viewBox="0 0 160 160">
+    <use href="#bear-base"/>
+    <circle cx="54" cy="36" r="5" fill="#8A5CF6"/>
+    <circle cx="74" cy="29" r="7" fill="#E24D6F"/>
+    <circle cx="97" cy="34" r="5" fill="#D88922"/>
+    <path d="M63 92c12 6 24 6 36 0" fill="none" stroke="#6F4029" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="teddy-celebrating" viewBox="0 0 160 160">
+    <use href="#bear-base"/>
+    <path d="M67 34l14-26 18 26H67Z" fill="#8A5CF6"/>
+    <circle cx="81" cy="12" r="5" fill="#F7C44A"/>
+    <path d="M25 48l9-7M126 67l11-4M33 83l-8 9M133 103l8 8" stroke="#E24D6F" stroke-width="5" stroke-linecap="round"/>
+    <use href="#spark-dots"/>
+  </symbol>
+
+  <symbol id="teddy-sleeping" viewBox="0 0 160 160">
+    <use href="#bear-base"/>
+    <path d="M60 70h13M87 70h13" stroke="#32241D" stroke-width="4" stroke-linecap="round"/>
+    <path d="M71 91c6 4 12 4 18 0" fill="none" stroke="#6F4029" stroke-width="4" stroke-linecap="round"/>
+    <text x="112" y="42" fill="#5B7CEC" font-size="26" font-family="Arial, sans-serif" font-weight="700">Zz</text>
+    <path d="M43 121c10 13 62 13 74 0 1 19-14 30-37 30s-38-11-37-30Z" fill="#FFF0F3" opacity=".9"/>
+  </symbol>
+
+  <symbol id="teddy-404" viewBox="0 0 160 160">
+    <use href="#bear-base"/>
+    <path d="M58 70c4-4 8-4 12 0M91 70c4-4 8-4 12 0" fill="none" stroke="#32241D" stroke-width="4" stroke-linecap="round"/>
+    <path d="M69 94c7-5 15-5 22 0" fill="none" stroke="#6F4029" stroke-width="4" stroke-linecap="round"/>
+    <rect x="51" y="116" width="58" height="26" rx="8" fill="#FFFFFF" stroke="#E7D9DD" stroke-width="3"/>
+    <text x="64" y="135" fill="#D88922" font-size="18" font-family="Arial, sans-serif" font-weight="700">404</text>
+  </symbol>
+</svg>
