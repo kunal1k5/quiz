@@ -524,7 +524,7 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
   }, [relationship, category, reloadKey])
 
   const selectedIds = useMemo(() => new Set(selected.map(question => question._id)), [selected])
-  const allFilters = [...filters, ['MY_OWN', '✨ My Own Question']]
+  const allFilters = filters
 
   const toggle = question => {
     setActionError('')
