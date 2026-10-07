@@ -1,6 +1,7 @@
 import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
+import { existsSync } from 'node:fs'
 import path from 'node:path'
 import fs from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
@@ -43,8 +44,12 @@ app.use((req, res, next) => {
 })
 app.use('/api/questions', questionRoutes)
 app.use('/api/quizzes', quizRoutes)
-app.use(express.static(clientDist))
-app.get('*', (req, res) => res.sendFile(path.join(clientDist, 'index.html')))
+if (existsSync(clientDist)) {
+  app.use(express.static(clientDist))
+  app.get('*', (req, res) => res.sendFile(path.join(clientDist, 'index.html')))
+} else {
+  app.get('*', (req, res) => res.status(404).json({ message: 'Frontend is deployed separately.' }))
+}
 
 export async function start() {
   await mongoose.connect(process.env.MONGODB_URI)
