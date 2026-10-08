@@ -735,7 +735,25 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
             </TeddyMessage>
           </section>
 
-          <div className="sticky top-0 z-20 -mx-1 mt-5 bg-[#fffdfc]/95 py-2 backdrop-blur">
+          <button
+            type="button"
+            onClick={() => {
+              setCategory('MY_OWN')
+              setCustomForm(null)
+              setActionError('')
+            }}
+            className={`mt-5 w-full rounded-[14px] border border-[var(--accent-border)] bg-[var(--accent-tint)] p-4 text-left shadow-[0_6px_16px_var(--accent-shadow)] ${category === 'MY_OWN' ? 'ring-2 ring-[var(--accent)] ring-offset-2' : ''}`}
+            aria-pressed={category === 'MY_OWN'}
+          >
+            <span className="flex items-center gap-2 text-[15px] font-extrabold text-[var(--accent-strong)]">
+              ✨ Create Your Own Question
+            </span>
+            <span className="mt-1 block text-[12px] font-semibold text-[#75696e]">
+              Make one that only your people can answer! 🧸
+            </span>
+          </button>
+
+          <div className="sticky top-0 z-20 -mx-1 mt-4 bg-[#fffdfc]/95 py-2 backdrop-blur">
             <div className="flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Question filters">
               {allFilters.map(([id, label]) => (
                 <button

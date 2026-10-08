@@ -8,7 +8,6 @@ export const relationships = [
 
 export const filters = [
   ['ALL', 'All'],
-  ['MY_OWN', '✨ My Own Question'],
   ['PERSONALITY', 'Deep'],
   ['FOOD', 'Food'],
   ['MEMORIES', 'Memories'],
