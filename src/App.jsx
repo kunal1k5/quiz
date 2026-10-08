@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
+import { Analytics } from '@vercel/analytics/react'
 import {
   ArrowLeft,
   ArrowRight,
@@ -1713,6 +1714,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
+      <Analytics />
     </div>
   )
 }
