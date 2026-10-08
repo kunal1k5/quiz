@@ -527,12 +527,6 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
   const [reloadKey, setReloadKey] = useState(0)
 
   useEffect(() => {
-    if (category === 'MY_OWN') {
-      setQuestions([])
-      setLoading(false)
-      setFetching(false)
-      return undefined
-    }
     const controller = new AbortController()
     setFetching(true)
     setLoadError('')
@@ -682,7 +676,7 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
                       aria-label={`Edit question ${index + 1}`}
                       onClick={() => {
                         setCustomForm(question)
-                        setCategory('MY_OWN')
+                        setCategory('ALL')
                         setComplete(false)
                       }}
                     >
@@ -738,12 +732,16 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
           <button
             type="button"
             onClick={() => {
-              setCategory('MY_OWN')
-              setCustomForm(null)
+              setCustomForm(value => value ? null : {
+                question: '',
+                options: [0, 1, 2, 3].map(() => ({ text: '', imageUrl: '' })),
+                correctAnswer: undefined,
+              })
+              setCategory('ALL')
               setActionError('')
             }}
-            className={`mt-5 w-full rounded-[14px] border border-[var(--accent-border)] bg-[var(--accent-tint)] p-4 text-left shadow-[0_6px_16px_var(--accent-shadow)] ${category === 'MY_OWN' ? 'ring-2 ring-[var(--accent)] ring-offset-2' : ''}`}
-            aria-pressed={category === 'MY_OWN'}
+            className={`mt-5 w-full rounded-[14px] border border-[var(--accent-border)] bg-[var(--accent-tint)] p-4 text-left shadow-[0_6px_16px_var(--accent-shadow)] ${customForm ? 'ring-2 ring-[var(--accent)] ring-offset-2' : ''}`}
+            aria-pressed={Boolean(customForm)}
           >
             <span className="flex items-center gap-2 text-[15px] font-extrabold text-[var(--accent-strong)]">
               ✨ Create Your Own Question
@@ -751,30 +749,37 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
             <span className="mt-1 block text-[12px] font-semibold text-[#75696e]">
               Make one that only your people can answer! 🧸
             </span>
+            <span className="mt-3 inline-flex items-center gap-1 text-[12px] font-extrabold text-[var(--accent-strong)]">
+              ✨ Create My Own Question <ArrowRight size={14} />
+            </span>
           </button>
 
-          <div className="sticky top-0 z-20 -mx-1 mt-4 bg-[#fffdfc]/95 py-2 backdrop-blur">
-            <div className="flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Question filters">
-              {allFilters.map(([id, label]) => (
-                <button
-                  key={id}
-                  type="button"
-                  role="tab"
-                  aria-selected={category === id}
-                  onClick={() => {
-                    setCategory(id)
-                    setActionError('')
-                    if (id === 'MY_OWN') setCustomForm(null)
-                  }}
-                  className={`filter-chip ${category === id ? 'is-active' : ''}`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </div>
+          {customForm && (
+            <CustomQuestionForm
+              key={customForm._id || customForm.draftKey || 'new-custom-question'}
+              value={customForm}
+              disabled={selected.length >= count && !customForm._id}
+              onCancel={() => {
+                setCustomForm(null)
+                setActionError('')
+              }}
+              onSave={value => {
+                if (selected.length >= count && !customForm._id) return setActionError('Your quiz is full! Remove a question to add another. 🧸')
+                const normalizedQuestion = value.question.trim().toLowerCase()
+                const duplicate = selected.some(item =>
+                  item._id !== customForm._id &&
+                  item.question.trim().toLowerCase() === normalizedQuestion)
+                if (duplicate) return setActionError('That custom question is already in your quiz.')
+                const item = { ...value, _id: customForm._id || `custom-${Date.now()}`, isCustom: true }
+                setCustomQuestions(items => customForm._id ? items.map(existing => existing._id === item._id ? item : existing) : [...items, item])
+                setSelected(items => customForm._id ? items.map(existing => existing._id === item._id ? item : existing) : [...items, item])
+                setCustomForm(null)
+                setActionError('✨ Added to your quiz!')
+              }}
+            />
+          )}
 
-          <div className="mt-3 flex items-center justify-between gap-3">
+          <div className="mt-5 flex items-center justify-between gap-3">
             <span className="text-[13px] font-bold text-[#54474e]">Selected: {selected.length} / {count}</span>
             <button type="button" onClick={surprise} className="inline-tool-button" disabled={surprising}>
               <WandSparkles size={15} />
@@ -782,21 +787,42 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
             </button>
           </div>
 
-          {fetching && !loading && (
-            <p className="mt-2 flex items-center gap-2 text-[12px] font-bold text-[#8a7b82]" aria-live="polite">
-              <LoaderCircle size={14} className="animate-spin text-[var(--accent)]" /> Filtering questions...
-            </p>
+          {selected.length > 0 && (
+            <section className="mt-3 grid gap-2" aria-label="Selected questions">
+              {selected.map(question => (
+                <article key={question._id} className="selected-question">
+                  <span className="question-index">{question.isCustom ? '✨' : selected.indexOf(question) + 1}</span>
+                  <p className="min-w-0 flex-1 text-[13px] font-semibold leading-5 text-[#43373d]">{question.question}</p>
+                  <button
+                    type="button"
+                    className="icon-button small"
+                    aria-label={`Remove ${question.isCustom ? 'custom ' : ''}question`}
+                    onClick={() => {
+                      setCustomQuestions(items => items.filter(item => item._id !== question._id))
+                      setSelected(items => items.filter(item => item._id !== question._id))
+                      if (!question.isCustom) {
+                        setCorrectAnswers(items => {
+                          const next = { ...items }
+                          delete next[question._id]
+                          return next
+                        })
+                      }
+                    }}
+                  >
+                    <X size={15} />
+                  </button>
+                </article>
+              ))}
+            </section>
           )}
 
           {actionError && (
-            <p role="alert" className="mt-3 rounded-[8px] bg-[var(--accent-soft)] px-3 py-2 text-[13px] font-semibold text-[var(--accent-strong)]">
+            <p role="status" className="mt-3 rounded-[8px] bg-[var(--accent-soft)] px-3 py-2 text-[13px] font-semibold text-[var(--accent-strong)]">
               {actionError}
             </p>
           )}
 
-          {category === 'MY_OWN' ? (
-            <>
-              <section className="mt-4" aria-label="Suggested personal questions">
+          <section className="mt-6" aria-label="Suggested personal questions">
                 <div className="flex items-end justify-between gap-3">
                   <div>
                     <p className="section-kicker accent-text">Question ideas</p>
@@ -828,6 +854,7 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
                           disabled={isDuplicate}
                           onClick={() => {
                             setCustomForm({
+                              draftKey: `suggestion-${Date.now()}`,
                               question: suggestion.questionText,
                               options: suggestion.options.map(option => ({ ...option })),
                               correctAnswer: undefined,
@@ -845,29 +872,34 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
                       )
                     })}
                 </div>
-              </section>
-              <CustomQuestionForm
-                key={customForm?._id || customForm?.question || 'new-custom-question'}
-                value={customForm}
-                disabled={selected.length >= count}
-                onCancel={() => setCategory('ALL')}
-                onSave={value => {
-                  if (selected.length >= count && !customForm) return setActionError('Your quiz is full! Remove a question to add another. 🧸')
-                  const normalizedQuestion = value.question.trim().toLowerCase()
-                  const duplicate = selected.some(item =>
-                    item._id !== customForm?._id &&
-                    item.question.trim().toLowerCase() === normalizedQuestion)
-                  if (duplicate) return setActionError('That custom question is already in your quiz.')
-                  const item = { ...value, _id: customForm?._id || `custom-${Date.now()}`, isCustom: true }
-                  setCustomQuestions(items => customForm ? items.map(existing => existing._id === item._id ? item : existing) : [...items, item])
-                  setSelected(items => customForm ? items.map(existing => existing._id === item._id ? item : existing) : [...items, item])
-                  setCustomForm(null)
-                  setCategory('ALL')
-                  setActionError('')
-                }}
-              />
-            </>
-          ) : (
+          </section>
+
+          <div className="sticky top-0 z-20 -mx-1 mt-4 bg-[#fffdfc]/95 py-2 backdrop-blur">
+            <div className="flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Question filters">
+              {allFilters.map(([id, label]) => (
+                <button
+                  key={id}
+                  type="button"
+                  role="tab"
+                  aria-selected={category === id}
+                  onClick={() => {
+                    setCategory(id)
+                    setActionError('')
+                  }}
+                  className={`filter-chip ${category === id ? 'is-active' : ''}`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {fetching && !loading && (
+            <p className="mt-2 flex items-center gap-2 text-[12px] font-bold text-[#8a7b82]" aria-live="polite">
+              <LoaderCircle size={14} className="animate-spin text-[var(--accent)]" /> Filtering questions...
+            </p>
+          )}
+
           <section className="mt-3 grid gap-2.5" aria-label="Available questions">
             {questions.length ? (
               questions.map(question => {
@@ -947,7 +979,6 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
               <EmptyPanel title="No questions here yet" message="Try another filter or use Surprise Me for a ready-made set." />
             )}
           </section>
-          )}
 
           {selected.length > 0 && selected.length < count && (
             <div className="mt-5 rounded-[8px] bg-[var(--accent-soft)] p-4 text-center text-[13px] font-bold text-[var(--accent-strong)]">
@@ -978,7 +1009,8 @@ function CustomQuestionForm({ value, disabled, onCancel, onSave }) {
     setOptions(items => items.map((item, itemIndex) => itemIndex === index ? { ...item, [field]: nextValue } : item))
   }
 
-  const save = () => {
+  const save = event => {
+    event.preventDefault()
     if (!question.trim()) return setError('Write your question first.')
     if (options.some(option => !option.text.trim())) return setError('Add text for all four options.')
     if (!Number.isInteger(correctAnswer)) return setError('Choose the correct answer.')
@@ -986,7 +1018,7 @@ function CustomQuestionForm({ value, disabled, onCancel, onSave }) {
   }
 
   return (
-    <motion.section initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="custom-question-card mt-4">
+    <motion.form onSubmit={save} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="custom-question-card mt-4">
       <TeddyMessage state="writing">Make one that only your people can answer! 🧸</TeddyMessage>
       <h2 className="display mt-5 text-[25px] font-extrabold">✨ Create Your Own Question</h2>
       <label className="mt-5 block text-[13px] font-bold text-[#55484f]" htmlFor="custom-question">Question</label>
@@ -1020,10 +1052,10 @@ function CustomQuestionForm({ value, disabled, onCancel, onSave }) {
       {error && <p role="alert" className="mt-3 text-[13px] font-bold text-[var(--accent-strong)]">{error}</p>}
       {disabled && !value && <p className="mt-3 text-[13px] font-bold text-[var(--accent-strong)]">Your quiz is full! Remove a question to add another. 🧸</p>}
       <div className="mt-5 grid gap-2">
-        <PrimaryButton disabled={disabled && !value} onClick={save}>✨ {value ? 'Save Changes' : 'Add To My Quiz'}</PrimaryButton>
-        <PrimaryButton variant="secondary" onClick={onCancel}>Cancel</PrimaryButton>
+        <PrimaryButton type="submit" disabled={disabled && !value}>✨ {value ? 'Save Changes' : 'Add To My Quiz'}</PrimaryButton>
+        <PrimaryButton type="button" variant="secondary" onClick={onCancel}>Cancel</PrimaryButton>
       </div>
-    </motion.section>
+    </motion.form>
   )
 }
 
@@ -1159,6 +1191,7 @@ function ShareRoute() {
 
 function PlayerQuiz({ slug }) {
   const [quiz, setQuiz] = useState(null)
+  const [leaderboardPreview, setLeaderboardPreview] = useState({ loading: true, entries: null })
   const [loadError, setLoadError] = useState(null)
   const [reloadKey, setReloadKey] = useState(0)
   const [step, setStep] = useState(-2)
@@ -1184,6 +1217,22 @@ function PlayerQuiz({ slug }) {
         })
       })
   }, [slug, reloadKey])
+
+  useEffect(() => {
+    let active = true
+    setLeaderboardPreview({ loading: true, entries: null })
+    api
+      .get(`/quizzes/${slug}/leaderboard`)
+      .then(({ data }) => {
+        if (active) setLeaderboardPreview({ loading: false, entries: (data.entries || []).slice(0, 5) })
+      })
+      .catch(() => {
+        if (active) setLeaderboardPreview({ loading: false, entries: null })
+      })
+    return () => {
+      active = false
+    }
+  }, [slug])
 
   if (loadError) {
     return (
@@ -1258,6 +1307,7 @@ function PlayerQuiz({ slug }) {
                 setStep(-1)
               }}>Let's Play <Heart size={17} /></PrimaryButton>
             </div>
+            <LeaderboardPreview {...leaderboardPreview} />
           </main>
         </PageTransition>
       </ThemeScope>
@@ -1673,6 +1723,35 @@ function ResultPage() {
         </main>
       </PageTransition>
     </ThemeScope>
+  )
+}
+
+function LeaderboardPreview({ loading, entries }) {
+  return (
+    <section className="mt-8 w-full max-w-[360px] rounded-2xl border border-[#eadfe0] bg-white/75 p-4 text-left shadow-[0_8px_22px_rgba(113,87,105,.1)]" aria-labelledby="leaderboard-preview-title">
+      <h2 id="leaderboard-preview-title" className="flex items-center gap-2 text-[16px] font-extrabold text-[#4a343c]">
+        <Trophy size={17} className="text-[var(--accent)]" /> Leaderboard
+      </h2>
+      {loading ? (
+        <p className="mt-3 flex items-center gap-2 text-[13px] font-semibold text-[#8e7d84]" aria-live="polite">
+          <LoaderCircle size={14} className="animate-spin text-[var(--accent)]" /> Loading rankings...
+        </p>
+      ) : entries === null ? (
+        <p className="mt-3 text-[13px] font-semibold text-[#8e7d84]">Leaderboard unavailable right now.</p>
+      ) : entries.length ? (
+        <ol className="mt-3 grid gap-2">
+          {entries.map((entry, index) => (
+            <li key={`${entry.playerName}-${entry.completedAt || index}`} className="flex items-center gap-3 text-[13px]">
+              <span className="w-6 text-center font-extrabold text-[var(--accent-strong)]">{entry.rank || index + 1}</span>
+              <span className="min-w-0 flex-1 truncate font-bold text-[#44363d]">{entry.playerName}</span>
+              <span className="text-[11px] font-bold text-[#8e7d84]">{entry.score}</span>
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <p className="mt-3 text-[13px] font-semibold text-[#8e7d84]">Be the first one on the leaderboard! 👀</p>
+      )}
+    </section>
   )
 }
 
