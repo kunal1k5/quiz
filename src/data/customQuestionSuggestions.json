@@ -1,0 +1,2282 @@
+[
+    {
+        "category":  "Habits",
+        "questionText":  "🎨 What is my favorite color?",
+        "options":  [
+                        {
+                            "text":  "🖤 Black",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💙 Blue",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Red",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💜 Purple",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🍎 What is my favorite fruit?",
+        "options":  [
+                        {
+                            "text":  "🍎 Apple",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍌 Banana",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍓 Strawberry",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🥭 Mango",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🍕 What is my favorite food?",
+        "options":  [
+                        {
+                            "text":  "🍕 Pizza",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍔 Burger",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍜 Noodles",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍗 Biryani",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🥤 What is my favorite drink?",
+        "options":  [
+                        {
+                            "text":  "🥤 Cold Drink",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "☕ Coffee",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🧋 Milkshake",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍵 Tea",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🍰 What is my favorite dessert?",
+        "options":  [
+                        {
+                            "text":  "🍰 Cake",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍨 Ice Cream",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍩 Donut",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍫 Chocolate",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🍦 What is my favorite ice cream flavor?",
+        "options":  [
+                        {
+                            "text":  "🍫 Chocolate",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍓 Strawberry",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍦 Vanilla",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🥭 Mango",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🌦️ What is my favorite season?",
+        "options":  [
+                        {
+                            "text":  "☀️ Summer",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🌧️ Monsoon",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍂 Autumn",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❄️ Winter",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "📅 What is my favorite day of the week?",
+        "options":  [
+                        {
+                            "text":  "😊 Monday",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🔥 Friday",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎉 Saturday",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😴 Sunday",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "📚 What is my favorite subject?",
+        "options":  [
+                        {
+                            "text":  "💻 Computer Science",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "➗ Mathematics",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🔬 Science",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📖 English",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "⚽ What is my favorite sport?",
+        "options":  [
+                        {
+                            "text":  "⚽ Football",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🏏 Cricket",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🏀 Basketball",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎾 Tennis",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🎬 What is my favorite type of movie?",
+        "options":  [
+                        {
+                            "text":  "😂 Comedy",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Romance",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👻 Horror",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🔥 Action",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "📺 What type of series do I enjoy most?",
+        "options":  [
+                        {
+                            "text":  "😂 Comedy",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🔪 Thriller",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Romance",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👻 Horror",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🎌 What is my favorite anime?",
+        "options":  [
+                        {
+                            "text":  "⚔️ One Piece",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍥 Naruto",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🗡️ Demon Slayer",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🔥 Jujutsu Kaisen",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🎵 What kind of music do I like most?",
+        "options":  [
+                        {
+                            "text":  "🎤 Pop",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎸 Rock",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎧 Hip-Hop",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Romantic",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "✈️ Where would I love to travel?",
+        "options":  [
+                        {
+                            "text":  "🇯🇵 Japan",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🇫🇷 Paris",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🇮🇹 Italy",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🏝️ Maldives",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "📱 Which app do I use the most?",
+        "options":  [
+                        {
+                            "text":  "📸 Instagram",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "▶️ YouTube",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💬 WhatsApp",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎵 Spotify",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🍿 What is my favorite snack?",
+        "options":  [
+                        {
+                            "text":  "🍿 Popcorn",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍟 Fries",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍫 Chocolate",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍪 Cookies",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🌅 What is the first thing I do after waking up?",
+        "options":  [
+                        {
+                            "text":  "📱 Check my phone",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💧 Drink water",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😴 Go back to sleep",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🚿 Take a shower",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "😴 What time do I usually sleep?",
+        "options":  [
+                        {
+                            "text":  "🌙 Before 10 PM",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🕚 10 PM–12 AM",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🌃 12–2 AM",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💀 After 2 AM",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "📱 What is the first app I open in the morning?",
+        "options":  [
+                        {
+                            "text":  "📸 Instagram",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💬 WhatsApp",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "▶️ YouTube",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎵 Spotify",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "😩 What do I usually do when I am bored?",
+        "options":  [
+                        {
+                            "text":  "📱 Scroll social media",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎮 Play games",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😴 Sleep",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎬 Watch something",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "😡 What do I usually do when I am angry?",
+        "options":  [
+                        {
+                            "text":  "🤐 Stay quiet",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🗣️ Complain",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🚶 Go for a walk",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💬 Text someone",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "😢 What do I usually do when I am sad?",
+        "options":  [
+                        {
+                            "text":  "🎧 Listen to music",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😴 Sleep",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🤐 Stay alone",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💬 Talk to someone",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "💸 What am I most likely to waste money on?",
+        "options":  [
+                        {
+                            "text":  "🍔 Food",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👕 Clothes",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎮 Games",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📱 Gadgets",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "⏰ Why am I usually late?",
+        "options":  [
+                        {
+                            "text":  "😴 I oversleep",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📱 I get distracted",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🚗 Traffic",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 I simply don\u0027t hurry",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🧠 What do I overthink the most?",
+        "options":  [
+                        {
+                            "text":  "❤️ Relationships",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💼 Career",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💬 Conversations",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🔮 The future",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "📱 What is my most-used emoji?",
+        "options":  [
+                        {
+                            "text":  "😂 😂",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😭 😭",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ ❤️",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💀 💀",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🗣️ What word do I say way too often?",
+        "options":  [
+                        {
+                            "text":  "Bro",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "Literally",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "Obviously",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "Wait",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🤦 What do I always forget?",
+        "options":  [
+                        {
+                            "text":  "🔑 My keys",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📱 My charger",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📅 Important dates",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💰 Where I spent money",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🍽️ What could I eat anytime?",
+        "options":  [
+                        {
+                            "text":  "🍕 Pizza",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍜 Noodles",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍗 Biryani",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍔 Burger",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🚫 What food would I never eat?",
+        "options":  [
+                        {
+                            "text":  "🐟 Fish",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🥦 Vegetables",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🌶️ Spicy food",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🥚 Eggs",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🍽️ What do I usually order at a restaurant?",
+        "options":  [
+                        {
+                            "text":  "🍕 Pizza",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍔 Burger",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍜 Noodles",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍗 Biryani",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🤐 What do I do when I don\u0027t want to talk?",
+        "options":  [
+                        {
+                            "text":  "📵 Ignore messages",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😴 Sleep",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎧 Listen to music",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🚶 Go somewhere alone",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🎒 What do I always carry with me?",
+        "options":  [
+                        {
+                            "text":  "📱 Phone",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎧 Earphones",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💧 Water bottle",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🔋 Power bank",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🛋️ What is my favorite way to relax?",
+        "options":  [
+                        {
+                            "text":  "🎬 Watch movies",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎵 Listen to music",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎮 Play games",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😴 Sleep",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🌙 What do I usually do late at night?",
+        "options":  [
+                        {
+                            "text":  "📱 Scroll my phone",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎧 Listen to music",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💬 Chat with friends",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💻 Work or study",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Habits",
+        "questionText":  "🚪 What would I choose on a free day?",
+        "options":  [
+                        {
+                            "text":  "🏠 Stay home",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍿 Go to the movies",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🌆 Go out with friends",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😴 Sleep all day",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Funny",
+        "questionText":  "😂 What is my most annoying habit?",
+        "options":  [
+                        {
+                            "text":  "📱 Always checking my phone",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "⏰ Being late",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🗣️ Talking too much",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😴 Sleeping too much",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Funny",
+        "questionText":  "🤪 What is the weirdest thing about me?",
+        "options":  [
+                        {
+                            "text":  "🗣️ I talk to myself",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎵 I randomly sing",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 I laugh at everything",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😴 I sleep anywhere",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Funny",
+        "questionText":  "💀 What is the dumbest thing I have ever done?",
+        "options":  [
+                        {
+                            "text":  "📱 Lost my phone",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🔑 Lost my keys",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📚 Forgot an exam",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 Sent a message to the wrong person",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Funny",
+        "questionText":  "🤫 What do I pretend to understand but actually don\u0027t?",
+        "options":  [
+                        {
+                            "text":  "💻 Technology",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📈 Money",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🧠 Complicated conversations",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 What people are talking about",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Funny",
+        "questionText":  "🫠 What am I most likely to say when I mess up?",
+        "options":  [
+                        {
+                            "text":  "My bad 😂",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "I didn\u0027t do it 💀",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "It wasn\u0027t my fault 😭",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "Nobody saw that 👀",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Funny",
+        "questionText":  "😂 What makes me laugh the easiest?",
+        "options":  [
+                        {
+                            "text":  "🤣 Memes",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🗣️ Friend jokes",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎬 Comedy",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💀 Dark humor",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Funny",
+        "questionText":  "🫣 What embarrasses me the most?",
+        "options":  [
+                        {
+                            "text":  "🎤 Speaking publicly",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💃 Dancing",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📸 Taking photos",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🗣️ Compliments",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Funny",
+        "questionText":  "🤡 What am I most likely to do when nobody is watching?",
+        "options":  [
+                        {
+                            "text":  "💃 Dance",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎤 Sing",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🗣️ Talk to myself",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 Make weird faces",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Funny",
+        "questionText":  "💀 What would I probably survive without for only one day?",
+        "options":  [
+                        {
+                            "text":  "📱 My phone",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍕 Good food",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎧 Music",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💬 Talking to people",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Funny",
+        "questionText":  "📸 What would I probably post too much?",
+        "options":  [
+                        {
+                            "text":  "🤳 Selfies",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍔 Food",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🌅 Random photos",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 Memes",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Friends",
+        "questionText":  "👯 Who do I text the most?",
+        "options":  [
+                        {
+                            "text":  "👫 My best friend",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ My partner",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👨‍👩‍👧 Family",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💬 Someone unexpected",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Friends",
+        "questionText":  "🏆 Who knows me the best?",
+        "options":  [
+                        {
+                            "text":  "👯 Best friend",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Partner",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👨‍👩‍👧 Family",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🤷 Nobody 😂",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Friends",
+        "questionText":  "👀 What is the first thing I notice about someone?",
+        "options":  [
+                        {
+                            "text":  "😊 Smile",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👀 Eyes",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🗣️ Personality",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👕 Style",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Friends",
+        "questionText":  "😊 What instantly makes me happy?",
+        "options":  [
+                        {
+                            "text":  "🍕 Food",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💬 A message from someone",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💰 Money",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎁 A surprise",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Friends",
+        "questionText":  "😤 What instantly annoys me?",
+        "options":  [
+                        {
+                            "text":  "⏰ People being late",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👻 Being ignored",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🗣️ Loud people",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🤥 Lying",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Friends",
+        "questionText":  "🚩 What is my biggest friendship pet peeve?",
+        "options":  [
+                        {
+                            "text":  "👻 Being ignored",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🤥 Lying",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "⏰ Being late",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💬 Fake behavior",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Friends",
+        "questionText":  "🤝 What do I value most in a friendship?",
+        "options":  [
+                        {
+                            "text":  "😂 Fun",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🔐 Trust",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Loyalty",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🗣️ Communication",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Friends",
+        "questionText":  "😶 What do I usually do when I miss someone?",
+        "options":  [
+                        {
+                            "text":  "💬 Text them",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📸 Look at old photos",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎧 Listen to music",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🤐 Say nothing",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Friends",
+        "questionText":  "😂 What do my friends always tease me about?",
+        "options":  [
+                        {
+                            "text":  "😴 Sleeping",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍕 Eating",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ My crush",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📱 My phone addiction",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Friends",
+        "questionText":  "🫶 What kind of friend am I?",
+        "options":  [
+                        {
+                            "text":  "😂 The funny one",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🛡️ The protective one",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🧠 The advice-giver",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😈 The troublemaker",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Savage",
+        "questionText":  "🚩 What is my biggest red flag?",
+        "options":  [
+                        {
+                            "text":  "😤 I overreact",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👻 I disappear",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🧠 I overthink",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 I am too stubborn",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Savage",
+        "questionText":  "💚 What is my biggest green flag?",
+        "options":  [
+                        {
+                            "text":  "❤️ Loyal",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🤝 Helpful",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🛡️ Protective",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 Funny",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Savage",
+        "questionText":  "💀 What is the most delusional thing about me?",
+        "options":  [
+                        {
+                            "text":  "😎 I think I\u0027m always right",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ I think everyone likes me",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 I think I\u0027m funny",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🧠 I think I can fix everything",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Savage",
+        "questionText":  "😂 What would I probably get cancelled for?",
+        "options":  [
+                        {
+                            "text":  "🗣️ Saying something too honestly",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💀 A bad joke",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📸 Posting something random",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😈 Being brutally honest",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Savage",
+        "questionText":  "💸 What would I spend my last ₹500 on?",
+        "options":  [
+                        {
+                            "text":  "🍕 Food",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎮 Games",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎁 Someone else",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "☕ Snacks and drinks",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Savage",
+        "questionText":  "🧟 What would I do first in a zombie apocalypse?",
+        "options":  [
+                        {
+                            "text":  "🏃 Run",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😴 Hide",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🛡️ Fight",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📱 Call my friends",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Savage",
+        "questionText":  "💰 What would I do first if I became rich?",
+        "options":  [
+                        {
+                            "text":  "🏠 Buy a house",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🚗 Buy a car",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "✈️ Travel",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🛍️ Go shopping",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Savage",
+        "questionText":  "🎭 What do I think I\u0027m good at but actually aren\u0027t?",
+        "options":  [
+                        {
+                            "text":  "🎤 Singing",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💃 Dancing",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 Making jokes",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎮 Gaming",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Savage",
+        "questionText":  "👑 What is my biggest main-character moment?",
+        "options":  [
+                        {
+                            "text":  "🎧 Walking with music",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📸 Taking selfies",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😎 Entering a room",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💃 Dancing alone",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Savage",
+        "questionText":  "🤦 What is my most questionable life choice?",
+        "options":  [
+                        {
+                            "text":  "❤️ Trusting the wrong person",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💸 Wasting money",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😴 Procrastinating",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 Saying yes too quickly",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Love",
+        "questionText":  "❤️ What is my ideal date?",
+        "options":  [
+                        {
+                            "text":  "🍽️ Dinner",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎬 Movie night",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🌅 Long drive",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🏖️ Beach date",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Love",
+        "questionText":  "💚 What is my biggest relationship green flag?",
+        "options":  [
+                        {
+                            "text":  "❤️ Loyalty",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🗣️ Communication",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🛡️ Protection",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 Humor",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Love",
+        "questionText":  "🚩 What is my biggest relationship red flag?",
+        "options":  [
+                        {
+                            "text":  "😤 Jealousy",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🧠 Overthinking",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👻 Ignoring",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😈 Being stubborn",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Love",
+        "questionText":  "😍 What makes me fall for someone?",
+        "options":  [
+                        {
+                            "text":  "😂 Their humor",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Their kindness",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👀 Their looks",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🧠 Their personality",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Love",
+        "questionText":  "😶 What is my biggest turn-off?",
+        "options":  [
+                        {
+                            "text":  "🤥 Lying",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😤 Arrogance",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👻 Ignoring",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💔 Disrespect",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Love",
+        "questionText":  "💌 What is my love language?",
+        "options":  [
+                        {
+                            "text":  "💬 Words of affirmation",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎁 Gifts",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "⏰ Quality time",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🤗 Physical touch",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Love",
+        "questionText":  "😏 What would make me jealous?",
+        "options":  [
+                        {
+                            "text":  "💬 Flirting with someone",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📱 Ignoring me",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Talking about an ex",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👀 Getting too close to someone",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Love",
+        "questionText":  "🥹 What romantic thing do I secretly love?",
+        "options":  [
+                        {
+                            "text":  "💌 Long messages",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🌹 Flowers",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎁 Surprise gifts",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🌙 Late-night calls",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Love",
+        "questionText":  "🥰 What is the cutest thing someone can do for me?",
+        "options":  [
+                        {
+                            "text":  "💌 Send a sweet text",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍫 Bring my favorite food",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🫶 Remember small details",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🌹 Give flowers",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Love",
+        "questionText":  "📱 What would I choose?",
+        "options":  [
+                        {
+                            "text":  "🌙 Late-night call",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💬 Long text",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎥 Video call",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Meet in person",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Crush",
+        "questionText":  "👀 What is my type?",
+        "options":  [
+                        {
+                            "text":  "😂 Funny",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🧠 Smart",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Caring",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😎 Confident",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Crush",
+        "questionText":  "😍 What do I notice first about my crush?",
+        "options":  [
+                        {
+                            "text":  "👀 Eyes",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😊 Smile",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👕 Style",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🗣️ Voice",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Crush",
+        "questionText":  "😳 How do I act around my crush?",
+        "options":  [
+                        {
+                            "text":  "😎 Act normal",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🤡 Act weird",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🤐 Become quiet",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 Talk too much",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Crush",
+        "questionText":  "💬 What would I text my crush first?",
+        "options":  [
+                        {
+                            "text":  "Hey 👋",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "What are you doing? 👀",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "How was your day? ❤️",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "Send a meme 😂",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Crush",
+        "questionText":  "❤️ What makes me like someone?",
+        "options":  [
+                        {
+                            "text":  "😊 Kindness",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 Humor",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🧠 Intelligence",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👀 Looks",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Personal",
+        "questionText":  "😨 What is my biggest fear?",
+        "options":  [
+                        {
+                            "text":  "🕷️ Spiders",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💔 Losing someone",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❌ Failure",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🌑 Being alone",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Personal",
+        "questionText":  "🎯 What is my biggest dream?",
+        "options":  [
+                        {
+                            "text":  "💰 Become successful",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "✈️ Travel the world",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🏠 Own a dream home",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Have a happy life",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Personal",
+        "questionText":  "💪 What am I most proud of?",
+        "options":  [
+                        {
+                            "text":  "🎓 My studies",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💼 My work",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ My relationships",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🧠 Personal growth",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Personal",
+        "questionText":  "📈 What do I wish I were better at?",
+        "options":  [
+                        {
+                            "text":  "🗣️ Communication",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💻 Skills",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "⏰ Time management",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🧠 Confidence",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Personal",
+        "questionText":  "🌈 What always cheers me up?",
+        "options":  [
+                        {
+                            "text":  "😂 Funny videos",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍕 Good food",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Talking to someone",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎵 Music",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Personal",
+        "questionText":  "💔 What can instantly ruin my mood?",
+        "options":  [
+                        {
+                            "text":  "👻 Being ignored",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🤥 Being lied to",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "💬 An argument",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😞 Bad news",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Personal",
+        "questionText":  "🫣 What am I secretly insecure about?",
+        "options":  [
+                        {
+                            "text":  "👀 My appearance",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🧠 My abilities",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🗣️ My communication",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Relationships",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Personal",
+        "questionText":  "🔄 What is one thing I want to change about myself?",
+        "options":  [
+                        {
+                            "text":  "🧠 Overthinking",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😴 Laziness",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😤 Temper",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "⏰ Procrastination",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Memories",
+        "questionText":  "🧸 What reminds me most of my childhood?",
+        "options":  [
+                        {
+                            "text":  "🎮 Old games",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "📺 Cartoons",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🏫 School",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🍭 Childhood snacks",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Memories",
+        "questionText":  "🎵 What song reminds you of me?",
+        "options":  [
+                        {
+                            "text":  "❤️ A romantic song",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "😂 A funny song",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🥹 An emotional song",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🔥 My favorite song",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Memories",
+        "questionText":  "📸 Which memory do I love the most?",
+        "options":  [
+                        {
+                            "text":  "👯 Friends",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👨‍👩‍👧 Family",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Relationship",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎓 School/college",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Memories",
+        "questionText":  "🏠 What is one place that means a lot to me?",
+        "options":  [
+                        {
+                            "text":  "🏡 Home",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🏫 School",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🎓 College",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🌳 A favorite hangout",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    },
+    {
+        "category":  "Memories",
+        "questionText":  "🥹 Which type of memory makes me emotional?",
+        "options":  [
+                        {
+                            "text":  "👨‍👩‍👧 Family",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "👯 Old friends",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "❤️ Relationships",
+                            "imageUrl":  ""
+                        },
+                        {
+                            "text":  "🧸 Childhood",
+                            "imageUrl":  ""
+                        }
+                    ],
+        "correctAnswer":  null,
+        "isSuggestion":  true
+    }
+]

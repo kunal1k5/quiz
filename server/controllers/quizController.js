@@ -12,20 +12,34 @@ const publicQuiz = (quiz, questions) => ({
   resultTone: quiz.gender === 'male' || quiz.gender === 'female' ? quiz.gender : 'neutral',
   creatorGender: quiz.gender === 'male' || quiz.gender === 'female' ? quiz.gender : 'prefer_not_to_say',
   totalQuestions: questions.length,
-  questions: questions.map(({ _id, question, options }) => ({ _id, question, options })),
+  questions: questions.map(({ _id, question, options, _isCustom }) => ({ _id, question, options, isCustom: Boolean(_isCustom) })),
 })
 
 const combinedQuestions = (quiz, bankQuestions) => [
-  ...quiz.questionIds.map(id => bankQuestions.find(question => String(question._id) === String(id))).filter(Boolean),
-  ...(quiz.customQuestions || []).map(question => ({ ...question, _id: question._id })),
+  ...(quiz.questionOrder?.length
+    ? quiz.questionOrder.map(item => item.type === 'normal'
+      ? bankQuestions.find(question => String(question._id) === item.questionId)
+      : (quiz.customQuestions || []).find(question => String(question.clientId || question._id) === item.questionId))
+    : [
+      ...quiz.questionIds.map(id => bankQuestions.find(question => String(question._id) === String(id))),
+      ...(quiz.customQuestions || []).map(question => ({ ...question, _id: question._id })),
+    ]).filter(Boolean),
 ]
+
+const markCustomQuestions = (quiz, questions) => {
+  const customIds = new Set((quiz.customQuestions || []).flatMap(question => [String(question._id), question.clientId].filter(Boolean)))
+  questions.forEach(question => {
+    if (customIds.has(String(question._id))) question._isCustom = true
+  })
+  return questions
+}
 
 async function loadPublicQuiz(slug) {
   const quiz = await Quiz.findOne({ slug }).lean()
   if (!quiz) return { status: 404, body: { message: 'Quiz not found.' } }
   if (!quiz.isActive) return { status: 410, body: { message: 'This quiz is no longer available.' } }
   const questions = await Question.find({ _id: { $in: quiz.questionIds }, active: true }).select('_id question category options').lean()
-  const ordered = combinedQuestions(quiz, questions)
+  const ordered = markCustomQuestions(quiz, combinedQuestions(quiz, questions))
   if (ordered.length !== quiz.questionIds.length + (quiz.customQuestions || []).length) {
     return { status: 410, body: { message: 'This quiz is no longer available.' } }
   }
@@ -57,11 +71,30 @@ const resultPayload = (response, quiz, questions) => ({
 
 export async function createQuiz(req, res) {
   try {
-    const { creatorName, gender = null, relationshipType, questionIds, questionConfigs, customQuestions = [] } = req.body
+    const { creatorName, gender = null, relationshipType, questionIds, questionConfigs, customQuestions = [], questionOrder = [] } = req.body
     const questionRelationship = relationshipQuestionTypes[relationshipType] || relationshipType
     const questions = await Question.find({ _id: { $in: questionIds }, active: true, relationshipType: { $in: [questionRelationship, 'all'] } }).select('_id')
     if (questions.length !== questionIds.length) return res.status(400).json({ message: 'One or more selected questions are unavailable.' })
-    const quiz = await Quiz.create({ slug: createSlug(), manageToken: createManageToken(), creatorName: creatorName.trim(), gender, relationshipType, questionIds, questionConfigs, customQuestions })
+    const normalizedCustomQuestions = customQuestions.map(question => ({
+      ...question,
+      clientId: question.clientId || question._id,
+    }))
+    const quiz = await Quiz.create({
+      slug: createSlug(),
+      manageToken: createManageToken(),
+      creatorName: creatorName.trim(),
+      gender,
+      relationshipType,
+      questionIds,
+      questionConfigs,
+      customQuestions: normalizedCustomQuestions,
+      questionOrder,
+    })
+    console.log('Quiz created:', {
+      quizId: String(quiz._id),
+      normalQuestions: questionIds.length,
+      customQuestions: normalizedCustomQuestions.length,
+    })
     const baseUrl = process.env.CLIENT_URL || (process.env.NODE_ENV === 'production' ? `${req.protocol}://${req.get('host')}` : 'http://localhost:5173')
     return res.status(201).json({
       quizId: quiz._id,
@@ -111,9 +144,8 @@ export async function submitQuiz(req, res) {
       return res.status(400).json({ message: 'Enter your name and answer every question.' })
     }
     const questions = await Question.find({ _id: { $in: quiz.questionIds }, active: true }).select('+correctAnswer _id question options').lean()
-    const ordered = combinedQuestions(quiz, questions)
+    const ordered = markCustomQuestions(quiz, combinedQuestions(quiz, questions))
     if (ordered.length !== totalQuestions) return res.status(410).json({ message: 'This quiz is no longer available.' })
-    ordered.forEach(question => { if (quiz.customQuestions?.some(custom => String(custom._id) === String(question._id))) question._isCustom = true })
     const configuredAnswers = quiz.questionConfigs?.length
       ? new Map(quiz.questionConfigs.map(item => [String(item.questionId), item.correctAnswer]))
       : null
@@ -138,9 +170,8 @@ export async function getResponseResult(req, res) {
     const response = await Response.findOne({ _id: req.params.responseId, quizId: quiz._id }).lean()
     if (!response) return res.status(404).json({ message: 'Result not found.' })
     const questions = await Question.find({ _id: { $in: quiz.questionIds }, active: true }).select('+correctAnswer _id question options').lean()
-    const ordered = combinedQuestions(quiz, questions)
+    const ordered = markCustomQuestions(quiz, combinedQuestions(quiz, questions))
     if (ordered.length !== quiz.questionIds.length + (quiz.customQuestions || []).length) return res.status(410).json({ message: 'This quiz is no longer available.' })
-    ordered.forEach(question => { if (quiz.customQuestions?.some(custom => String(custom._id) === String(question._id))) question._isCustom = true })
     return res.json(resultPayload(response, quiz, ordered))
   } catch (error) {
     console.error(error)
@@ -224,9 +255,8 @@ export async function getSubmissions(req, res) {
         const response = await Response.findOne({ _id: req.params.submissionId, quizId: quiz._id }).lean()
         if (!response) return res.status(404).json({ message: 'Submission not found.' })
         const questions = await Question.find({ _id: { $in: quiz.questionIds }, active: true }).select('+correctAnswer _id question options').lean()
-        const ordered = combinedQuestions(quiz, questions)
+        const ordered = markCustomQuestions(quiz, combinedQuestions(quiz, questions))
         if (ordered.length !== quiz.questionIds.length + (quiz.customQuestions || []).length) return res.status(410).json({ message: 'This quiz is no longer available.' })
-        ordered.forEach(question => { if (quiz.customQuestions?.some(custom => String(custom._id) === String(question._id))) question._isCustom = true })
         return res.json({ success: true, result: resultPayload(response, quiz, ordered) })
       } catch (error) {
         console.error(error)

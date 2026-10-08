@@ -25,7 +25,15 @@ const quizSchema = new mongoose.Schema({
         required: true,
         validate: value => value.length === 4,
       },
+      clientId: { type: String, trim: true },
       correctAnswer: { type: Number, required: true, min: 0, max: 3 },
+    }],
+    default: [],
+  },
+  questionOrder: {
+    type: [{
+      type: { type: String, enum: ['normal', 'custom'], required: true },
+      questionId: { type: String, required: true, trim: true },
     }],
     default: [],
   },

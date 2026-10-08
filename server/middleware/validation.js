@@ -5,7 +5,7 @@ export function cleanText(value, max = 120) {
 }
 
 export function validateQuizCreation(req, res, next) {
-  const { creatorName, gender, relationshipType, questionIds, questionConfigs, customQuestions = [] } = req.body
+  const { creatorName, gender, relationshipType, questionIds, questionConfigs, customQuestions = [], questionOrder } = req.body
   if (!cleanText(creatorName, 80) || (gender !== undefined && gender !== null && !validGenders.includes(gender)) || !validRelationships.includes(relationshipType) || !Array.isArray(questionIds) || !Array.isArray(customQuestions) || !validCounts.includes(questionIds.length + customQuestions.length)) {
     return res.status(400).json({ message: 'Add your name, choose a relationship, and select 10 questions.' })
   }
@@ -16,6 +16,10 @@ export function validateQuizCreation(req, res, next) {
   }
   if (new Set(questionIds).size !== questionIds.length || questionIds.some(id => typeof id !== 'string' || !/^[a-f\d]{24}$/i.test(id))) {
     return res.status(400).json({ message: 'Some selected questions are invalid.' })
+  }
+  if (questionOrder !== undefined && (!Array.isArray(questionOrder) || questionOrder.length !== questionIds.length + customQuestions.length ||
+    questionOrder.some(item => !item || !['normal', 'custom'].includes(item.type) || typeof item.questionId !== 'string' || !item.questionId))) {
+    return res.status(400).json({ message: 'The selected question order is invalid.' })
   }
   if (questionConfigs !== undefined && (!Array.isArray(questionConfigs) || questionConfigs.length !== questionIds.length ||
     questionConfigs.some(item => !item || item.questionId !== questionIds[questionConfigs.indexOf(item)] || !Number.isInteger(item.correctAnswer) || item.correctAnswer < 0 || item.correctAnswer > 3))) {

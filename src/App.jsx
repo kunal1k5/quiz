@@ -21,11 +21,13 @@ import {
 import { Link, Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { teddyMessages } from './assets/quizlyAssets'
 import { StickerLayer, TeddyArt, TeddyMessage } from './components/VisualAssets'
+import customQuestionSuggestions from './data/customQuestionSuggestions.json'
 import api from './services/api'
 import { filters, getRelationship, getResultMessage, getResultMood, getThemeStyle, relationships } from './utils/quizlyData'
 
 const APP_DESCRIPTION = 'Create a fun quiz about yourself and find out how well your friends, partner or family really know you.'
 const DEFAULT_QUESTION_COUNT = 10
+const QUIZ_COUNTS = [10, 15]
 const genderOptions = [
   { id: 'male', symbol: '👨', label: 'Male', description: 'Share a little about yourself' },
   { id: 'female', symbol: '👩', label: 'Female', description: 'Share a little about yourself' },
@@ -361,10 +363,11 @@ function CreateFlow() {
   const [relationship, setRelationship] = useState(location.state?.relationship || '')
   const [name, setName] = useState('')
   const [gender, setGender] = useState('')
+  const [quizCount, setQuizCount] = useState(DEFAULT_QUESTION_COUNT)
   const [error, setError] = useState('')
   const themeRelationship = relationship || 'best-friend'
 
-  if (step === 3) return <QuestionPicker relationship={relationship} creatorName={name.trim()} gender={gender} count={DEFAULT_QUESTION_COUNT} />
+  if (step === 3) return <QuestionPicker relationship={relationship} creatorName={name.trim()} gender={gender} count={quizCount} />
 
   const next = () => {
     if (step === 0 && !relationship) return setError('Pick someone to continue.')
@@ -402,6 +405,27 @@ function CreateFlow() {
                       setError('')
                     }}
                   />
+                ))}
+              </div>
+              <p className="mt-7 text-[13px] font-bold text-[#55484f]">How many questions?</p>
+              <div className="mt-3 grid grid-cols-2 gap-3">
+                {QUIZ_COUNTS.map(count => (
+                  <motion.button
+                    key={count}
+                    type="button"
+                    whileTap={{ scale: 0.98 }}
+                    aria-pressed={quizCount === count}
+                    onClick={() => setQuizCount(count)}
+                    className={`gender-card ${quizCount === count ? 'is-selected' : ''}`}
+                  >
+                    <span className="min-w-0 flex-1 text-left">
+                      <span className="block text-[15px] font-extrabold text-[#2d252b]">{count} questions</span>
+                      <span className="mt-1 block text-[12px] text-[#75696e]">{count === 10 ? 'Quick and sweet' : 'The full story'}</span>
+                    </span>
+                    <span className="select-dot" aria-hidden="true">
+                      {quizCount === count && <Check size={13} strokeWidth={3} />}
+                    </span>
+                  </motion.button>
                 ))}
               </div>
             </section>
@@ -489,6 +513,7 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
   const [selected, setSelected] = useState([])
   const [customQuestions, setCustomQuestions] = useState([])
   const [customForm, setCustomForm] = useState(null)
+  const [suggestionCategory, setSuggestionCategory] = useState('All')
   const [correctAnswers, setCorrectAnswers] = useState({})
   const [expanded, setExpanded] = useState({})
   const [skipped, setSkipped] = useState([])
@@ -573,7 +598,11 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
           questionId: question._id,
           correctAnswer: correctAnswers[question._id],
         })),
-        customQuestions: selected.filter(question => question.isCustom).map(({ _id, isCustom, ...question }) => question),
+        customQuestions: selected.filter(question => question.isCustom).map(({ _id, isCustom, ...question }) => ({ ...question, clientId: _id })),
+        questionOrder: selected.map(question => ({
+          type: question.isCustom ? 'custom' : 'normal',
+          questionId: question._id,
+        })),
       })
       navigate(`/quiz/${data.slug}/share`, { state: data })
     } catch (error) {
@@ -748,20 +777,78 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
           )}
 
           {category === 'MY_OWN' ? (
-            <CustomQuestionForm
-              value={customForm}
-              disabled={selected.length >= count}
-              onCancel={() => setCategory('ALL')}
-              onSave={value => {
-                if (selected.length >= count && !customForm) return setActionError('Your quiz is full! Remove a question to add another. 🧸')
-                const item = { ...value, _id: customForm?._id || `custom-${Date.now()}`, isCustom: true }
-                setCustomQuestions(items => customForm ? items.map(existing => existing._id === item._id ? item : existing) : [...items, item])
-                setSelected(items => customForm ? items.map(existing => existing._id === item._id ? item : existing) : [...items, item])
-                setCustomForm(null)
-                setCategory('ALL')
-                setActionError('')
-              }}
-            />
+            <>
+              <section className="mt-4" aria-label="Suggested personal questions">
+                <div className="flex items-end justify-between gap-3">
+                  <div>
+                    <p className="section-kicker accent-text">Question ideas</p>
+                    <h2 className="display mt-1 text-[22px] font-extrabold">Start with a suggestion</h2>
+                  </div>
+                  <span className="text-[12px] font-bold text-[#8e7d84]">{customQuestionSuggestions.length} ideas</span>
+                </div>
+                <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
+                  {['All', ...new Set(customQuestionSuggestions.map(item => item.category))].map(item => (
+                    <button
+                      key={item}
+                      type="button"
+                      className={`filter-chip ${suggestionCategory === item ? 'is-active' : ''}`}
+                      onClick={() => setSuggestionCategory(item)}
+                    >
+                      {item}
+                    </button>
+                  ))}
+                </div>
+                <div className="mt-3 grid gap-2">
+                  {customQuestionSuggestions
+                    .filter(item => suggestionCategory === 'All' || item.category === suggestionCategory)
+                    .map((suggestion, index) => {
+                      const isDuplicate = selected.some(item => item.question.trim().toLowerCase() === suggestion.questionText.trim().toLowerCase())
+                      return (
+                        <button
+                          key={`${suggestion.category}-${index}`}
+                          type="button"
+                          disabled={isDuplicate}
+                          onClick={() => {
+                            setCustomForm({
+                              question: suggestion.questionText,
+                              options: suggestion.options.map(option => ({ ...option })),
+                              correctAnswer: undefined,
+                            })
+                            setActionError('')
+                          }}
+                          className="question-card text-left disabled:cursor-not-allowed disabled:opacity-50"
+                        >
+                          <span className="question-badge" aria-hidden="true"><Plus size={16} /></span>
+                          <span className="ml-3 font-semibold leading-5 text-[#43373d]">{suggestion.questionText}</span>
+                          <small className="mt-2 block text-[12px] font-bold text-[var(--accent-strong)]">
+                            {isDuplicate ? 'Already added' : `${suggestion.category} · Use and edit`}
+                          </small>
+                        </button>
+                      )
+                    })}
+                </div>
+              </section>
+              <CustomQuestionForm
+                key={customForm?._id || customForm?.question || 'new-custom-question'}
+                value={customForm}
+                disabled={selected.length >= count}
+                onCancel={() => setCategory('ALL')}
+                onSave={value => {
+                  if (selected.length >= count && !customForm) return setActionError('Your quiz is full! Remove a question to add another. 🧸')
+                  const normalizedQuestion = value.question.trim().toLowerCase()
+                  const duplicate = selected.some(item =>
+                    item._id !== customForm?._id &&
+                    item.question.trim().toLowerCase() === normalizedQuestion)
+                  if (duplicate) return setActionError('That custom question is already in your quiz.')
+                  const item = { ...value, _id: customForm?._id || `custom-${Date.now()}`, isCustom: true }
+                  setCustomQuestions(items => customForm ? items.map(existing => existing._id === item._id ? item : existing) : [...items, item])
+                  setSelected(items => customForm ? items.map(existing => existing._id === item._id ? item : existing) : [...items, item])
+                  setCustomForm(null)
+                  setCategory('ALL')
+                  setActionError('')
+                }}
+              />
+            </>
           ) : (
           <section className="mt-3 grid gap-2.5" aria-label="Available questions">
             {questions.length ? (
@@ -866,7 +953,7 @@ function QuestionPicker({ count = 10, relationship, creatorName, gender }) {
 function CustomQuestionForm({ value, disabled, onCancel, onSave }) {
   const [question, setQuestion] = useState(value?.question || '')
   const [options, setOptions] = useState(value?.options || [0, 1, 2, 3].map(() => ({ text: '', imageUrl: '' })))
-  const [correctAnswer, setCorrectAnswer] = useState(value?.correctAnswer)
+  const [correctAnswer, setCorrectAnswer] = useState(value?.correctAnswer ?? undefined)
   const [error, setError] = useState('')
 
   const updateOption = (index, field, nextValue) => {
@@ -876,7 +963,7 @@ function CustomQuestionForm({ value, disabled, onCancel, onSave }) {
   const save = () => {
     if (!question.trim()) return setError('Write your question first.')
     if (options.some(option => !option.text.trim())) return setError('Add text for all four options.')
-    if (correctAnswer === undefined) return setError('Choose the correct answer.')
+    if (!Number.isInteger(correctAnswer)) return setError('Choose the correct answer.')
     onSave({ question: question.trim(), options: options.map(option => ({ text: option.text.trim(), imageUrl: option.imageUrl.trim() })), correctAnswer })
   }
 
