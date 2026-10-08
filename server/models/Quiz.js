@@ -38,6 +38,7 @@ const quizSchema = new mongoose.Schema({
     default: [],
   },
   isActive: { type: Boolean, default: true, index: true },
+  likes: { type: Number, default: 0, min: 0 },
 }, { timestamps: { createdAt: true, updatedAt: false } })
 
 quizSchema.index({ slug: 1, isActive: 1 })

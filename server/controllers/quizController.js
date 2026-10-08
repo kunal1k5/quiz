@@ -1,4 +1,4 @@
-import { Question, Quiz, Response } from '../models/index.js'
+import { Like, Question, Quiz, Response } from '../models/index.js'
 import { createSlug } from '../utils/slug.js'
 import { cleanText } from '../middleware/validation.js'
 import { relationshipQuestionTypes } from '../utils/constants.js'
@@ -50,6 +50,7 @@ const resultPayload = (response, quiz, questions) => ({
   responseId: response._id,
   score: response.score,
   percentage: response.percentage,
+  likes: quiz.likes || 0,
   totalQuestions: questions.length,
   playerName: response.playerName,
   creatorName: quiz.creatorName,
@@ -176,6 +177,37 @@ export async function getResponseResult(req, res) {
   } catch (error) {
     console.error(error)
     return res.status(500).json({ message: 'Unable to load this result.' })
+  }
+}
+
+export async function getLikes(req, res) {
+  try {
+    const quiz = await Quiz.findOne({ slug: req.params.slug, isActive: true }).select('likes').lean()
+    if (!quiz) return res.status(404).json({ message: 'Quiz not found.' })
+    return res.json({ likes: quiz.likes || 0 })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ message: 'Unable to load likes.' })
+  }
+}
+
+export async function likeQuiz(req, res) {
+  try {
+    const quiz = await Quiz.findOne({ slug: req.params.slug, isActive: true }).select('_id likes').lean()
+    if (!quiz) return res.status(404).json({ message: 'Quiz not found.' })
+    const clientId = req.get('x-client-id')
+    try {
+      await Like.create({ quizId: quiz._id, clientId })
+    } catch (error) {
+      if (error?.code !== 11000) throw error
+      const current = await Quiz.findById(quiz._id).select('likes').lean()
+      return res.json({ liked: true, likes: current?.likes || 0 })
+    }
+    const updated = await Quiz.findByIdAndUpdate(quiz._id, { $inc: { likes: 1 } }, { new: true }).select('likes').lean()
+    return res.json({ liked: true, likes: updated?.likes || 0 })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ message: "Couldn't like right now. Please try again." })
   }
 }
 

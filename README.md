@@ -106,6 +106,8 @@ Then open `http://localhost:5000`.
 - `POST /api/quizzes/:slug/submit` - validates answers and calculates the score on the server.
 - `GET /api/quizzes/:slug/responses/:responseId` - returns a saved result and answer review without exposing correct answer indexes.
 - `GET /api/quizzes/:slug/leaderboard` - returns public leaderboard entries.
+- `GET /api/quizzes/:slug/likes` - returns the public like count for a quiz.
+- `POST /api/quizzes/:slug/like` - records one anonymous browser like using the `x-client-id` header and returns the updated count.
 - `GET /api/quizzes/manage/:manageToken` - returns private creator dashboard summary and saved submissions.
 - `GET /api/quizzes/manage/:manageToken/submissions/:submissionId` - returns a private submission review for the creator.
 

@@ -1424,6 +1424,87 @@ function AnswersReview({ review }) {
   )
 }
 
+function getLikeClientId() {
+  const storageKey = 'quizly-like-client-id'
+  try {
+    const existing = window.localStorage.getItem(storageKey)
+    if (existing) return existing
+    const clientId = window.crypto?.randomUUID?.() || `client-${Date.now()}-${Math.random().toString(36).slice(2)}`
+    window.localStorage.setItem(storageKey, clientId)
+    return clientId
+  } catch {
+    return `client-${Date.now()}-${Math.random().toString(36).slice(2)}`
+  }
+}
+
+function QuizLikes({ slug, initialLikes = 0 }) {
+  const [likes, setLikes] = useState(initialLikes)
+  const [liked, setLiked] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
+  const clientId = useMemo(getLikeClientId, [])
+
+  useEffect(() => {
+    try {
+      setLiked(window.localStorage.getItem(`quizly-liked-${slug}`) === 'true')
+    } catch {
+      setLiked(false)
+    }
+    api.get(`/quizzes/${slug}/likes`)
+      .then(({ data }) => setLikes(data.likes || 0))
+      .catch(() => setError("Couldn't load likes right now."))
+  }, [slug])
+
+  const like = async () => {
+    if (liked || submitting) return
+    setSubmitting(true)
+    setError('')
+    try {
+      const { data } = await api.post(`/quizzes/${slug}/like`, null, { headers: { 'x-client-id': clientId } })
+      setLikes(data.likes || 0)
+      setLiked(true)
+      try {
+        window.localStorage.setItem(`quizly-liked-${slug}`, 'true')
+      } catch {
+        // The server-side unique index still prevents repeat likes when storage is unavailable.
+      }
+    } catch {
+      setError("Couldn't like right now. Please try again.")
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
+  return (
+    <section className="mt-8 rounded-[16px] border border-[var(--accent-border)] bg-[var(--accent-tint)] p-5 text-center">
+      <p className="text-[15px] font-extrabold text-[#493c42]">💕 Enjoyed this quiz?</p>
+      <motion.button
+        type="button"
+        whileTap={{ scale: 0.96 }}
+        onClick={like}
+        disabled={liked || submitting}
+        animate={liked ? { scale: [1, 1.08, 1] } : { scale: 1 }}
+        className="mt-3 inline-flex min-h-[46px] items-center justify-center gap-2 rounded-[12px] bg-[var(--accent)] px-5 text-[14px] font-extrabold text-white shadow-[0_8px_18px_var(--accent-shadow)] disabled:cursor-default disabled:opacity-90"
+      >
+        <motion.span animate={liked ? { scale: [1, 1.25, 1] } : { scale: 1 }} aria-hidden="true">❤️</motion.span>
+        {liked ? 'Liked' : 'Like this Quiz'}
+      </motion.button>
+      <motion.p key={likes} initial={{ opacity: 0.4, y: 2 }} animate={{ opacity: 1, y: 0 }} className="mt-3 text-[13px] font-bold text-[#75696e]">
+        ❤️ {likes} {likes === 1 ? 'person likes' : 'people liked'} this quiz
+      </motion.p>
+      {error && <p role="alert" className="mt-2 text-[12px] font-bold text-[var(--accent-strong)]">{error}</p>}
+      <a
+        href="https://www.instagram.com/love_mycards"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-4 inline-flex min-h-[40px] items-center justify-center rounded-[10px] border border-[var(--accent-border)] px-4 text-[12px] font-bold text-[var(--accent-strong)]"
+      >
+        📸 Follow us on Instagram
+      </a>
+    </section>
+  )
+}
+
 function ResultPage() {
   const { slug, responseId } = useParams()
   const location = useLocation()
@@ -1545,6 +1626,8 @@ function ResultPage() {
           </div>
 
           <AnswersReview review={result.review || []} />
+
+          <QuizLikes slug={slug} initialLikes={result.likes || 0} />
 
           <div className="mt-7 grid grid-cols-3 gap-2">
             <PrimaryButton variant="secondary" onClick={share}>
@@ -1702,6 +1785,7 @@ function CreatorQuizDashboard() {
             <PrimaryButton onClick={copy}><Share2 size={17} /> Share Quiz</PrimaryButton>
             <PrimaryButton variant="secondary" onClick={() => setReloadKey(key => key + 1)}>Refresh Results ↻</PrimaryButton>
           </div>
+          <QuizLikes slug={quiz.slug} />
           <h2 className="display mt-9 text-[22px] font-extrabold">Who took your quiz? 👀</h2>
           {submissions.length ? (
             <div className="mt-4 grid gap-3">

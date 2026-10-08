@@ -64,6 +64,14 @@ export function validateSlugParam(req, res, next) {
   return next()
 }
 
+export function validateClientId(req, res, next) {
+  const clientId = req.get('x-client-id')
+  if (!clientId || !/^[A-Za-z0-9_-]{16,128}$/.test(clientId)) {
+    return res.status(400).json({ message: 'A valid client identifier is required.' })
+  }
+  return next()
+}
+
 export function validateResponseIdParam(req, res, next) {
   if (!/^[a-f\d]{24}$/i.test(req.params.responseId)) return res.status(404).json({ message: 'Result not found.' })
   return next()
